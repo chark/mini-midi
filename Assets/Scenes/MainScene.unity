@@ -268,8 +268,8 @@ PlayableDirector:
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: -1705456933629504551, guid: 3962419bfc1c24b43908aa0880fb3eb7, type: 2}
-    value: {fileID: 682339690}
+  - key: {fileID: 5850643948522898593, guid: 3962419bfc1c24b43908aa0880fb3eb7, type: 2}
+    value: {fileID: 1086685526}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &682339692
@@ -299,6 +299,8 @@ GameObject:
   - component: {fileID: 1086685522}
   - component: {fileID: 1086685521}
   - component: {fileID: 1086685524}
+  - component: {fileID: 1086685525}
+  - component: {fileID: 1086685526}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -396,6 +398,47 @@ MonoBehaviour:
   stabilizeDuration: 2
   midiChannel: 9
   noteNumber: 60
+--- !u!114 &1086685525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086685519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab1d14a68dbc8541908e014dde45f50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1086685526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086685519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 525e8f97edc085e4488baa759b57e2a3, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1086685525}
+          m_MethodName: sayHello
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1416271165
 GameObject:
   m_ObjectHideFlags: 0
