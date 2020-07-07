@@ -97,7 +97,7 @@ MonoBehaviour:
     animationSmooth: 0.2
     rotationSpeed: 16
     walkByDefault: 0
-    rotateWithCamera: 1
+    rotateWithCamera: 0
     walkSpeed: 1
     runningSpeed: 2
     sprintSpeed: 5
