@@ -1,5 +1,4 @@
-﻿using MidiJack;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Jumpy : MonoBehaviour
 {
@@ -9,11 +8,8 @@ public class Jumpy : MonoBehaviour
     [Tooltip("Time taken in seconds for the jump to stabilize")]
     public float stabilizeDuration = 2f;
 
-    [Tooltip("MIDI channel under which the note is played")]
-    public MidiChannel midiChannel = MidiChannel.Ch10;
-
-    [Tooltip("Note which triggers the jump")]
-    public int noteNumber = 0x3C;
+    [Tooltip("Sequence which causes the jumps")]
+    public Sequence sequence;
     
     private Vector3 initialPosition;
     private float jumpTime;
@@ -50,7 +46,7 @@ public class Jumpy : MonoBehaviour
 
     private void Update()
     {
-        if (MidiMaster.GetKeyDown(midiChannel, noteNumber))
+        if (sequence.IsDown)
         {
             Jump();
         }
